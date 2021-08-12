@@ -1,0 +1,50 @@
+{
+  "@import": "./element.php",
+  "name": "example_item",
+  "title": "Example - item",
+  "icon": "${url:images/icon.svg}",
+  "group": "Example",
+  "iconSmall": "${url:images/iconSmall.svg}",
+  "element": true,
+  "width": 500,
+  "fields": {
+    "content": {
+      "label": "Add custom field",
+      "title": "value",
+      "button": "Custom field",
+      "type": "content-items",
+      "item": "example_item_field"
+    },
+    "name": "${builder.name}",
+    "id": "${builder.id}",
+    "status": "${builder.status}",
+    "class": "${builder.cls}",
+    "attributes": "${builder.attrs}",
+    "css": {
+      "type": "editor",
+      "label": "CSS",
+      "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>",
+      "editor": "code",
+      "mode": "css",
+      "attrs": {
+        "debounce": 500
+      }
+    }
+  },
+  "fieldset": {
+    "default": {
+      "type": "tabs",
+
+      "fields": [
+        {
+          "title": "Content",
+          "fields": [
+            "content"
+          ]
+        },
+
+        "${builder.advancedItem}"
+      ]
+    }
+  }
+}

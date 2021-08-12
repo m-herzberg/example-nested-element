@@ -1,0 +1,61 @@
+{
+  "@import": "./element.php",
+  "name": "example",
+  "title": "Example",
+  "icon": "${url:images/icon.svg}",
+  "group": "Example",
+  "iconSmall": "${url:images/iconSmall.svg}",
+  "element": true,
+  "width": 500,
+
+  "templates": {
+    "render": "./templates/template.php",
+    "content": "./templates/content.php"
+  },
+  "placeholder": {
+    "children": [
+      {
+        "type": "example_item"
+      }
+    ]
+  },
+  "fields": {
+    "content": {
+      "label": "Items",
+      "title": "value",
+      "button": "Add item",
+      "type": "content-items",
+      "item": "example_item"
+    },
+    "name": "${builder.name}",
+    "id": "${builder.id}",
+    "status": "${builder.status}",
+    "class": "${builder.cls}",
+    "attributes": "${builder.attrs}",
+    "css": {
+      "type": "editor",
+      "label": "CSS",
+      "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>",
+      "editor": "code",
+      "mode": "css",
+      "attrs": {
+        "debounce": 500
+      }
+    }
+  },
+  "fieldset": {
+    "default": {
+      "type": "tabs",
+      "fields": [
+        {
+          "title": "Custom fields",
+          "fields": [
+            "content"
+          ]
+        },
+
+        "${builder.advanced}"
+      ]
+    }
+  }
+}
