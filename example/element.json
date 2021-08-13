@@ -6,8 +6,8 @@
   "group": "Example",
   "iconSmall": "${url:images/iconSmall.svg}",
   "element": true,
+  "container": true,
   "width": 500,
-
   "templates": {
     "render": "./templates/template.php",
     "content": "./templates/content.php"
@@ -48,7 +48,7 @@
       "type": "tabs",
       "fields": [
         {
-          "title": "Custom fields",
+          "title": "Content",
           "fields": [
             "content"
           ]

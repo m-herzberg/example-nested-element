@@ -7,9 +7,14 @@
   "iconSmall": "${url:images/iconSmall.svg}",
   "element": false,
   "width": 500,
+  "templates": {
+    "render": "./templates/template.php",
+    "content": "./templates/content.php"
+  },
   "fields": {
     "value": {
-      "label": "Custom Field"
+      "label": "Custom Field",
+      "source": true
     },
     "name": "${builder.name}",
     "id": "${builder.id}",
@@ -25,7 +30,8 @@
       "attrs": {
         "debounce": 500
       }
-    }
+    },
+    "source": "${builder.source}"
   },
   "fieldset": {
     "default": {

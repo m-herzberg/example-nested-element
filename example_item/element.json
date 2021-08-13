@@ -5,8 +5,12 @@
   "icon": "${url:images/icon.svg}",
   "group": "Example",
   "iconSmall": "${url:images/iconSmall.svg}",
-  "element": true,
+  "element": false,
   "width": 500,
+  "templates": {
+    "render": "./templates/template.php",
+    "content": "./templates/content.php"
+  },
   "fields": {
     "content": {
       "label": "Add custom field",
@@ -29,7 +33,8 @@
       "attrs": {
         "debounce": 500
       }
-    }
+    },
+    "source": "${builder.source}"
   },
   "fieldset": {
     "default": {
